@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable quotes */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
