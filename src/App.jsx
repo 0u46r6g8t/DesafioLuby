@@ -1,9 +1,9 @@
 import React from 'react';
 
 // Components
-import Login from './pages/login';
+// import Login from './pages/login';
 import Repository from './pages/respositorios';
-import Menu from './components/MenuFooter/Menu';
+// import Menu from './components/MenuFooter/Menu';
 
 // Style
 import './style/global.scss';

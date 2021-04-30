@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
-import StyledComp from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = StyledComp.div`
+export const Container = styled.div`
   bottom: 0;
   width: 99.3%;
   position: fixed;
@@ -9,7 +9,7 @@ export const Container = StyledComp.div`
   z-index: auto;
 `;
 
-export const Content = StyledComp.div`
+export const Content = styled.div`
   display: flex;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -29,7 +29,7 @@ export const Content = StyledComp.div`
   }
 `;
 
-export const Icon = StyledComp.div`
+export const Icon = styled.div`
   text-align: center;
   svg {color: black};
   // background-color: black;

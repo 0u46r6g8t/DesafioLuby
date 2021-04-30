@@ -18,44 +18,36 @@ const Menu = () => (
   <Container>
     <Content>
       <a href="#">
-        {/* <IconContext.Provider value={{ size: '28' }}> */}
         <Icon>
-          <FiHome color="black" />
+          <FiHome />
         </Icon>
-        {/* </IconContext.Provider> */}
         <p>
           Home
         </p>
       </a>
 
       <a href="#">
-        {/* <IconContext.Provider value={{ size: '28' }}> */}
         <Icon>
           <FiGithub />
         </Icon>
-        {/* </IconContext.Provider> */}
         <p>
           Repos
         </p>
       </a>
 
       <a href="#">
-        {/* <IconContext.Provider value={{ size: '28' }}> */}
         <Icon color="black">
           <IoPeopleOutline />
         </Icon>
-        {/* </IconContext.Provider> */}
         <p>
           Seguidores
         </p>
       </a>
 
       <a href="#">
-        {/* <IconContext.Provider value={{ size: '28' }}> */}
         <Icon>
           <IoPeopleOutline />
         </Icon>
-        {/* </IconContext.Provider> */}
         <p>Seguindo</p>
       </a>
     </Content>
