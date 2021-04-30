@@ -8,7 +8,6 @@ import { FiHome, FiGithub } from 'react-icons/fi';
 import { IoPeopleOutline } from 'react-icons/io5';
 // import { IconContext } from 'react-icons';
 
-// Styled
 import {
   Container,
   Content,
