@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable consistent-return */
 /* eslint-disable @typescript-eslint/no-empty-function */
