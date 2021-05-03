@@ -15,8 +15,13 @@ import { Link } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const [nameUser, setNameUser] = useState('');
+  const [activate, setActivate] = useState(false);
 
-  function handleName() {}
+  function handleName() {
+    if (!nameUser) {
+      setActivate(true);
+    }
+  }
 
   return (
     <div className="container">
@@ -27,19 +32,31 @@ const Login: React.FC = () => {
           </div>
         </IconContext.Provider>
         <div className="content">
-          <input
-            type="text"
-            className="inputLogin"
-            placeholder="Usuário"
-            onChange={(e) => setNameUser(e.target.value)}
-            required
-          />
+          <div className="inputField">
+            <input
+              type="text"
+              className="inputLogin"
+              placeholder="Usuário"
+              onChange={(e) => setNameUser(e.target.value)}
+              maxLength={20}
+              required
+            />
+            <span id="required">Campo Obrigatório</span>
+          </div>
 
-          <Link to={`/home/${nameUser}`}>
-            <button className="buttonLogin" onClick={handleName}>
-              Entrar
-            </button>
-          </Link>
+          {
+            nameUser ? (
+              <Link to={`/home/${nameUser}`}>
+                <button className="buttonLogin" onClick={handleName}>
+                  Entrar
+                </button>
+              </Link>
+            ) : (
+              <button className="buttonLogin" onClick={handleName}>
+                Entrar
+              </button>
+            )
+          }
         </div>
       </div>
     </div>

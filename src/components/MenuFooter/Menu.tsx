@@ -62,7 +62,7 @@ const Menu = (props: any) => {
 
         {/* Rota disponivel para setar os following, mas infelizmente os
           following não estão sendo retornados */}
-        <Link to={`/${user}/following/`}>
+        <Link to={`/${user}/following`}>
           <Icon color={color !== 4 ? activateFollowing : '#000000'}>
             <MdPeople
               size="28"
