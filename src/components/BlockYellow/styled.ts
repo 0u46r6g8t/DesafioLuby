@@ -12,7 +12,7 @@ export const Container = styled.div<IPropsContainer>`
   flex-direction: row;
   justify-content: start;
   height: ${(props) => `${props.heigth}px`};
-  width: 99vw;
+  width: 100%;
   padding-top: 20px;
   border-bottom: 1px solid #595F64;
 `;

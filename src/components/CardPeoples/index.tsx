@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
@@ -10,6 +11,7 @@ import './styled.scss';
 // Icons
 import { IconContext } from 'react-icons';
 import { BiExit } from 'react-icons/bi';
+import { IoArrowBackOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 import HookApi from '../../hook/segments';
@@ -19,6 +21,11 @@ const CardPeoples = ({ ...props }) => {
   return (
     <div className="container">
       <header className="containerHeader">
+        { props.color == 'green' ? (
+          <IoArrowBackOutline size="28" color="white" style={{ padding: '5px 5px' }} />
+        ) : (
+          <></>
+        )}
         <p className="nick">
           #
           {UserData.login}
@@ -45,8 +52,8 @@ const CardPeoples = ({ ...props }) => {
           <div className="dataUser">
             <h1>{UserData.name}</h1>
             <span>
-              <p className="email">{!UserData.email && 'Sem email'}</p>
-              <p className="city">{UserData.location}</p>
+              <p className="email">{!UserData.email && 'Sem email cadastrado'}</p>
+              <p className="city">{UserData.location || 'Sem localização cadastrada'}</p>
             </span>
           </div>
         </div>
