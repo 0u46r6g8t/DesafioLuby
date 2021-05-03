@@ -15,22 +15,24 @@ import {
 
 // Components
 import HookRepos from '../../hook/repository';
-import { IPropsRepos } from '../../interface';
 
 const Repositories: React.FC = () => {
+  // Carrega os repositorios do usuário, através da requisição de utilizando o 'fetch'
   const { username } = useParams();
   const UserRepos = HookRepos(username);
-  console.log(typeof UserRepos);
 
   return (
     <Container>
       <HeaderBack />
       <Content>
-        <Repository Data={UserRepos[0]} />
+        {
+          UserRepos.map((repos) => (
+            <Repository Data={repos} />
+          ))
+        }
       </Content>
       <Menu />
     </Container>
-
   );
 };
 

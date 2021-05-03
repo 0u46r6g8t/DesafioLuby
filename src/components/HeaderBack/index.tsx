@@ -3,7 +3,6 @@ import React from 'react';
 
 // Icon
 import { IoMdArrowBack } from 'react-icons/io';
-import Menu from '../MenuFooter/Menu';
 
 // Styled
 import {

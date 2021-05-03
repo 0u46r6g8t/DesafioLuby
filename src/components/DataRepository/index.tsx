@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 
 // Icons
@@ -12,18 +12,18 @@ import { IPropsRepos } from '../../interface';
 import { BlockText } from './styled';
 
 const BlockData = ({ ...props }) => {
-  const Data = props.DataRepos;
+  const data: IPropsRepos = props.DataRepos;
 
   return (
     <BlockText>
-      {/* <h4>{props.name}</h4> */}
+      <h4>{data.name}</h4>
       <p>
-        {/* {props.descrition || 'Sem descrição'} */}
+        {data.descrition || 'Sem descrição'}
       </p>
       <div className="data">
         <div className="star">
           <AiOutlineStar />
-          {/* <span>{props.stargazers_count}</span> */}
+          <span>{data.stargazers_count}</span>
         </div>
         <div className="privacity">
           <VscUnlock color="green" />

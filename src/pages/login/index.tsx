@@ -1,3 +1,5 @@
+/* eslint-disable react/void-dom-elements-no-children */
+/* eslint-disable consistent-return */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable jsx-quotes */
 /* eslint-disable react/button-has-type */
@@ -25,7 +27,14 @@ const Login: React.FC = () => {
           </div>
         </IconContext.Provider>
         <div className="content">
-          <input type="text" className="inputLogin" placeholder="Usuário" onChange={(e) => setNameUser(e.target.value)} />
+          <input
+            type="text"
+            className="inputLogin"
+            placeholder="Usuário"
+            onChange={(e) => setNameUser(e.target.value)}
+            required
+          />
+
           <Link to={`/home/${nameUser}`}>
             <button className="buttonLogin" onClick={handleName}>
               Entrar
