@@ -61,13 +61,12 @@
 
   // Estiliza a section com as informações de cidade, nome e email
   section{
-    margin-left: auto;
-
+    
     .containerMainSection{
       height: 147px;
-      position: absolute;
+      position: fixed;
       top: 80px;
-      left: calc(50%+73.5px);
+      left: calc(50%+ 73.5px);
       right: calc(50% - 73.5px);
       border-radius: 100px 100px;
       z-index: 1;

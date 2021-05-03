@@ -10,7 +10,7 @@ import './styled.scss';
 // Icons
 import { IconContext } from 'react-icons';
 import { BiExit } from 'react-icons/bi';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import HookApi from '../../hook/segments';
 
