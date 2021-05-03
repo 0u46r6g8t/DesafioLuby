@@ -1,7 +1,7 @@
 
 .container{
   max-height: 812px;
-  max-width: 375px;
+  max-width: 375pt;
   
   .containerHeader{
     min-height: 137px;
@@ -39,6 +39,11 @@
 
       span{
         padding: 10px 0;
+        color: white;
+      }
+
+      span:hover{
+        cursor: pointer;
       }
     }
 
@@ -60,13 +65,14 @@
       z-index: 1;
       
       .contentMainImage{
-        border: 3px solid #FFFFFF;
-        height: 140px;
+        border: 4px solid #FFFFFF;
+        height: 139px;
         border-radius: 100px;
         
         img{
           padding: 0;
           width: 141px;
+          height: 100%;
           border-radius: 100px;
         }
       }
@@ -98,7 +104,7 @@
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         background-color: #FFCE00;
-        width: 5pt;
+        width: 7pt;
         padding-top: 5px;
         height: 21pt;
       }
@@ -128,8 +134,8 @@
     // Controle de seguidores, seguintes e repositorios
     .controllerFollowers{
       background-color: #5252525D;
-      min-width: 300px;
-      padding: 15px;
+      padding: 10px;
+      max-width: 100%;
       height: 77px;
       display: flex;
       text-align: center;
@@ -153,7 +159,6 @@
 
     // Biografia do usuario
     .bio{
-      
       .blockTitle{
         display: flex;
         flex-direction: row-reverse;

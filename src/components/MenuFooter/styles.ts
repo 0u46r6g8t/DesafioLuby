@@ -1,12 +1,15 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
+// Interfaces
+import { Styled } from '../../interface';
+
 export const Container = styled.div`
-  bottom: 0;
-  width: 99.3%;
+  bottom: -10px;
+  width: 100vw;
   position: fixed;
-  min-height: 60pt;
-  z-index: auto;
+  min-height: 50pt;
+  filter:blur(0.4px);
 `;
 
 export const Content = styled.div`
@@ -17,20 +20,26 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   height: 60pt;
-  background-color: #cecece;
-
+  background-color: #FFFFFF;
+  
   a{
     padding: 5px;
-    color: #3E3E3E;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+  } 
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.div<Styled>`
   text-align: center;
-  svg {color: black};
-  // background-color: black;
+  svg {
+    color: ${(props) => props.color};
+    size: 29; 
+  };
+
+  p{
+    color: ${(props) => props.color};
+    font-weight: bold;
+  }
 `;
