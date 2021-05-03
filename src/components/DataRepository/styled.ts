@@ -8,7 +8,7 @@ export const BlockText = styled.div`
   justify-content: space-between;
   padding: 10px 10px;
   margin-left: 10px;
-  width: 85%;
+  width: 90%;
   
   h4{
     font-size: 15pt;
@@ -17,7 +17,8 @@ export const BlockText = styled.div`
   p{
     margin-top: 10px;
     font-weight: 100;
-    width: 295px;
+    width: 80%;
+    text-align: justify;
     font-size: 15px;
     text-align: left;
   }

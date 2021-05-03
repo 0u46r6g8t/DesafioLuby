@@ -6,19 +6,18 @@ import {
   Context,
 } from './styled';
 
-// Components
-import BlockData from '../DataRepository';
-import { IPropsRepos } from '../../interface';
-
-interface IPropsRepoArray{
-  Data: IPropsRepos
+// Interface
+interface IProps {
+  heigth: number
 }
 
-const BlockYellow: React.FC<IPropsRepoArray> = (Data) => (
-  <Container>
+const BlockYellow: React.FC<IProps> = ({ ...Data }) => (
+  <Container heigth={Data.heigth}>
     <Context />
-    <BlockData DataRepos={Data.Data} />
+    {/* Recebe os filhos deste componente e os renderiza */}
+    {Data.children}
   </Container>
 );
 
+// Exporta o componente
 export default BlockYellow;

@@ -8,7 +8,7 @@ export const Container = styled.div`
   bottom: -10px;
   width: 100vw;
   position: fixed;
-  min-height: 50pt;
+  height: 70pt;
   filter:blur(0.4px);
 `;
 
@@ -18,6 +18,7 @@ export const Content = styled.div`
   border-top-left-radius: 15px;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 10px;
   width: 100%;
   height: 60pt;
   background-color: #FFFFFF;

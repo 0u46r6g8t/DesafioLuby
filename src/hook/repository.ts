@@ -1,6 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // Interfaces
 import { IPropsRepos } from '../interface';
@@ -16,7 +14,7 @@ const HookRepos = (username:string): IPropsRepos[] => {
     };
 
     hook();
-  }, []);
+  }, [username]);
 
   return repos;
 };

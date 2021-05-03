@@ -14,7 +14,7 @@ body, html, #root{
 
 .App{
   background-color: #292929;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }

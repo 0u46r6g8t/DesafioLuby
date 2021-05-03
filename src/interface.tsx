@@ -27,5 +27,11 @@ export interface IPropsRepos {
   name: string
   stargazers_count: number
   private: boolean
-  descrition: string
+  description: string
+}
+
+export interface IPropsFollowers {
+  id: number
+  avatar_url: string
+  login: string
 }

@@ -1,14 +1,19 @@
+/* eslint-disable no-console */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface IPropsContainer {
+  heigth: number
+}
+
+export const Container = styled.div<IPropsContainer>`
   display: flex;
   flex-direction: row;
   justify-content: start;
-  height: 141.5px;
+  height: ${(props) => `${props.heigth}px`};
   width: 99vw;
-  padding-top:15px;
+  padding-top: 20px;
   border-bottom: 1px solid #595F64;
 `;
 

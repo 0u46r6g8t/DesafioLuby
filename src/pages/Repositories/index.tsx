@@ -8,13 +8,11 @@ import Menu from '../../components/MenuFooter/Menu';
 import Repository from '../../components/BlockYellow';
 
 // Styled
-import {
-  Container,
-  Content,
-} from './styled';
+import './styled.scss';
 
-// Components
+// Hooks
 import HookRepos from '../../hook/repository';
+import BlockData from '../../components/DataRepository';
 
 const Repositories: React.FC = () => {
   // Carrega os repositorios do usuário, através da requisição de utilizando o 'fetch'
@@ -22,17 +20,19 @@ const Repositories: React.FC = () => {
   const UserRepos = HookRepos(username);
 
   return (
-    <Container>
-      <HeaderBack />
-      <Content>
+    <div className="Container">
+      <HeaderBack numberReps={UserRepos.length} nameHeader="Repositórios" />
+      <div className="Context">
         {
           UserRepos.map((repos) => (
-            <Repository Data={repos} />
+            <Repository heigth={141.5}>
+              <BlockData DataRepos={repos} />
+            </Repository>
           ))
         }
-      </Content>
-      <Menu />
-    </Container>
+      </div>
+      <Menu color={2} />
+    </div>
   );
 };
 

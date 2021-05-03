@@ -1,0 +1,17 @@
+.Container {
+  width: 100vw;
+  height: 100%;
+  background-color: #292929;
+  padding-bottom: 10px;
+
+  .Context {
+    display: flex;
+    flex-direction: column;
+    background-color: #292929;
+    padding-top: 20px;
+    padding-bottom: 50pt;
+    width:99vw;
+    margin: left;
+
+  }
+}

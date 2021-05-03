@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 
 // Styled
 import './styled.scss';
@@ -11,15 +12,10 @@ import { IconContext } from 'react-icons';
 import { BiExit } from 'react-icons/bi';
 import { useParams, Link } from 'react-router-dom';
 
-import Menu from '../MenuFooter/Menu';
 import HookApi from '../../hook/segments';
 
-const CardPeoples: React.FC = () => {
-  const { username } = useParams();
-
-  const [valueExit, setValueExit] = useState('Salvar');
-  const UserData = HookApi(username);
-
+const CardPeoples = ({ ...props }) => {
+  const UserData = HookApi(props.username);
   return (
     <div className="container">
       <header className="containerHeader">
@@ -28,9 +24,9 @@ const CardPeoples: React.FC = () => {
           {UserData.login}
         </p>
         <Link to="/" className="buttonExit">
-          <span>{valueExit}</span>
+          <span>{props.textBox}</span>
           <IconContext.Provider value={{ size: '30' }}>
-            <BiExit color="red" style={{ backgroundColor: '#1F1F1F', padding: '5' }} />
+            <BiExit color={props.color} style={{ backgroundColor: '#1F1F1F', padding: '5' }} />
           </IconContext.Provider>
         </Link>
       </header>
@@ -83,7 +79,6 @@ const CardPeoples: React.FC = () => {
             {UserData.bio || 'Sem biografia'}
           </p>
         </section>
-        <Menu value={1} />
       </div>
     </div>
   );

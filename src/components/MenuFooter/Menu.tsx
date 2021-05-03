@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 
 // Icon
@@ -14,21 +14,25 @@ import {
   Icon,
 } from './styles';
 
-const Menu = (...props: any) => {
-  const { value } = props;
+const Menu = (props: any) => {
+  const { color } = props;
 
+  // Realizar a manipulação se está setado ou não
   const [activateHome, setActivateHome] = useState('#A5A5A5');
   const [activateRepo, setActivateRepo] = useState('#A5A5A5');
-  const [activateFollowers, setActivateFollowers] = useState('#d17171');
+  const [activateFollowers, setActivateFollowers] = useState('#A5A5A5');
   const [activateFollowing, setActivateFollowing] = useState('#A5A5A5');
 
-  const { username } = useParams();
+  // Busca na rota e na api os dados
+  const { username, userFollowing } = useParams();
   const [user, setUser] = useState(username);
+
   return (
     <Container>
       <Content>
+        {/* Indica a primeira rota 'home' com o user principal */}
         <Link to={`/home/${user}`}>
-          <Icon color={value !== 1 ? activateHome : '#000000'}>
+          <Icon color={color !== 1 ? activateHome : '#000000'}>
             <FiHome
               size="28"
             />
@@ -36,8 +40,9 @@ const Menu = (...props: any) => {
           </Icon>
         </Link>
 
+        {/* Seta os repositorios publicos da pessoa */}
         <Link to={`/${user}/repository`}>
-          <Icon color={value !== 2 ? activateRepo : '#000000'}>
+          <Icon color={color !== 2 ? activateRepo : '#000000'}>
             <FiGithub
               size="28"
             />
@@ -45,8 +50,9 @@ const Menu = (...props: any) => {
           </Icon>
         </Link>
 
-        <Link to={`${user}/followers`}>
-          <Icon color={value !== 3 ? activateFollowers : '#000000'}>
+        {/* Seta os seguidores */}
+        <Link to={`/${user}/followers`}>
+          <Icon color={color !== 3 ? activateFollowers : '#000000'}>
             <MdPeople
               size="28"
             />
@@ -54,8 +60,10 @@ const Menu = (...props: any) => {
           </Icon>
         </Link>
 
-        <Link to={`${user}/following`}>
-          <Icon color={value !== 4 ? activateFollowing : '#000000'}>
+        {/* Rota disponivel para setar os following, mas infelizmente os
+          following não estão sendo retornados */}
+        <Link to={`/${user}/following/`}>
+          <Icon color={color !== 4 ? activateFollowing : '#000000'}>
             <MdPeople
               size="28"
             />
@@ -67,4 +75,5 @@ const Menu = (...props: any) => {
   );
 };
 
+// Exporta o componente
 export default Menu;
