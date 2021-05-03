@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 
 // Interfaces
@@ -11,11 +10,12 @@ const HookApi = (username:string): IPropsGit => {
     const hook = async () => {
       const response = await fetch(`https://api.github.com/users/${username}`);
       const data = await response.json();
+
       setUsers(data);
     };
 
     hook();
-  }, []);
+  }, [user, username]);
 
   return user;
 };

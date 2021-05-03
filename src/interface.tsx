@@ -3,6 +3,7 @@ export interface Styled{
   color: string;
 }
 
+// Interfaces User
 export interface IPropsGit {
   id: number
   name: string
@@ -20,6 +21,8 @@ export interface IPropsGit {
   public_repos: number
   starred_url: string
   userGet ?: string
+  message: string
+  isError: number
 }
 
 export interface IPropsRepos {

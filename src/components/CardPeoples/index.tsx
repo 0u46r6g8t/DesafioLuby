@@ -12,12 +12,13 @@ import './styled.scss';
 import { IconContext } from 'react-icons';
 import { BiExit } from 'react-icons/bi';
 import { IoArrowBackOutline } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 import HookApi from '../../hook/segments';
 
 const CardPeoples = ({ ...props }) => {
   const UserData = HookApi(props.username);
+
   return (
     <div className="container">
       <header className="containerHeader">

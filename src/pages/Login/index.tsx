@@ -40,9 +40,14 @@ const Login: React.FC = () => {
               placeholder="Usuário"
               onChange={(e) => setNameUser(e.target.value)}
               maxLength={20}
-              required
             />
-            <span id="required">Campo Obrigatório</span>
+            {
+              !nameUser ? (
+                <span id="required">Campo Obrigatório</span>
+              ) : (
+                <span id="required"> </span>
+              )
+            }
           </div>
 
           {
